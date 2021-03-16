@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'app.dart';
+import 'package:get/get.dart';
 
-void main() => runApp(GetMaterialApp(home: App()));
+import 'route/Routes.dart';
 
+void main() {
+  runApp(GetMaterialApp(
+    initialRoute: Routes.Initial,
+    getPages: AppPages.pages,
+    defaultTransition: Transition.rightToLeft,
+  ));
+}
